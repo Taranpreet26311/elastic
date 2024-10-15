@@ -52,6 +52,6 @@ We have set affinity in such a way no component will have its replica on the sam
 
 1. We choose GKE for deployement due ease of managing a serivce like Elasticsearch compared to VMs. It might be complex to manage it via Instance group or other services.
 
-2. Terraform was chosen to automate the deployment of Infrastrucure and destroying it easily
+2. Terraform was chosen to automate the deployment of Infrastrucure and destroying it easily.
 
-3. Helm made it easier to deploy Elastic from a single values file instead of having to managed dozens of yaml files
+3. Helm made it easier to deploy Elastic from a single values file instead of having to managed dozens of manifest files.
