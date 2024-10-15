@@ -22,7 +22,7 @@ and for Helm
 
 Now we will use terraform to create the cluster. Set the required values in gke.tfvars or create a new file with different vars.
 
-`cd terraform && terraform init && tterraform plan -var-file="gke.tfvars"`
+`cd terraform && terraform init && terraform plan -var-file="gke.tfvars"`
 
 If everything seems alright apply
 
@@ -36,7 +36,11 @@ To install Elasticsearch, we will first login to cluster
 
 `gcloud container clusters get-credentials test-cluster --region us-central1 --project <PROJECT ID>>`
 
-Now install the chart
+Now install the chart. We will use Bitnami's Elasticsearch chart
+
+`helm repo add bitnami https://charts.bitnami.com/bitnami`
+
+And then run
 
 `helm install <DEPLOYMENET-NAME>  oci://registry-1.docker.io/bitnamicharts/elasticsearch -f elasticsearch/values.yaml`
 
