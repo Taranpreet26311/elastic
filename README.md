@@ -48,8 +48,10 @@ This will deploy an Elasticseach cluster with 3 nodes each of coordinator, maste
 
 We have set affinity in such a way no component will have its replica on the same K8s node. For example; master will have replica on different nodes of K8s cluster
 
-We choose GKE for deployement due ease of managing a serivce like Elasticsearch compared to VMs. It might be complex manage it via Instance group or other services.
+### Stack decision
 
-Terraform was chosen to automate the deployment of Infrastrucure and destroying it easily
+1. We choose GKE for deployement due ease of managing a serivce like Elasticsearch compared to VMs. It might be complex manage it via Instance group or other services.
 
-Helm made it easier to deploy Elastic from a single values file instead of having to managed dozens of yaml files
+2. Terraform was chosen to automate the deployment of Infrastrucure and destroying it easily
+
+3. Helm made it easier to deploy Elastic from a single values file instead of having to managed dozens of yaml files
